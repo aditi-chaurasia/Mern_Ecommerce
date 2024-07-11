@@ -31,7 +31,7 @@ app.use("/api/user",authRoute);
 app.use("/api/category",categoryRoutes);
 
 app.use(express.static(path.join(__dirname,'/client/build')))
-// app.get('*', (req, res) => res.sendFile(path.join(__dirname,'/client/build/index.html')));
+app.get('*', (req, res) => res.sendFile(path.join(__dirname,'/client/build/index.html')));
 
 //product router
 app.use("/api/product",productRoute);
